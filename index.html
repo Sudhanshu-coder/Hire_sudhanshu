@@ -1,635 +1,400 @@
-/*
- * Theme Name:
- * Theme URI:
- * Author: Sudhanshu
- * Author URI/Mail: sudhanshuavi06@gmail.com
- * */
-
-/* FONT
-================================================== */
-@font-face {
-  font-family: 'fontello';
-  src: url('../fonts/fontello.eot?37927580');
-  src: url('../fonts/fontello.eot?37927580#iefix') format('embedded-opentype'),
-       url('../fonts/fontello.woff2?37927580') format('woff2'),
-       url('../fonts/fontello.woff?37927580') format('woff'),
-       url('../fonts/fontello.ttf?37927580') format('truetype'),
-       url('../fonts/fontello.svg?37927580#fontello') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
- [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1em;
-  margin-left: .2em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-twitter:before { content: '\f099'; } /* '' */
-.icon-gplus:before { content: '\f0d5'; } /* '' */
-.icon-linkedin:before { content: '\f0e1'; } /* '' */
-.icon-up:before { content: '\f176'; } /* '' */
-
-/* CUSTOM RESETS
-================================================== */
-a {
-    transition: color 0.25s ease-in-out;
-    -moz-transition: color 0.25s ease-in-out;
-    -webkit-transition: color 0.25s ease-in-out;
-    -o-transition: color 0.25s ease-in-out;
-    -ms-transition: color 0.25s ease-in-out;
-}
-
-a:focus,
-a:hover {
-    outline: 0 none;
-    text-decoration: none;
-}
-
-h4 {
-    font-size: 30px;
-}
-
-/* Buttons */
-.btn {
-    min-width: 145px;
-    line-height: 50px;
-    padding: 0 30px;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 0;
-    transition: box-shadow 0.25s ease-in-out;
-    -moz-transition: box-shadow 0.25s ease-in-out;
-    -webkit-transition: box-shadow 0.25s ease-in-out;
-    -o-transition: box-shadow 0.25s ease-in-out;
-    -ms-transition: box-shadow 0.25s ease-in-out;
-}
-
-.btn-fill {
-    color: #fff;
-    background-color: #212121;
-}
-
-.btn-fill:hover {
-  background-color: #3e8e41;
-  color: white;
-}
-
-.btn-border {
-    background-color: transparent;
-    color: #212121;
-    border: 1px solid #212121;
-}
-
-.btn-border:hover {
-  background-color: #3e8e41;
-  color: white;
-}
-
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
 
-.btn-fill:hover,
-.btn-fill:focus {
-    color: #fff;
-}
-
-.btn:hover,
-.btn:focus {
-    box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.15);
-}
-
-/* Input fields */
-.form-control {
-    padding-left: 10px;
-    border: 0;
-    border-bottom: 1px solid #212121;
-    border-radius: 0;
-    background-color: transparent;
-    box-shadow: none;
-    outline: 0 none transparent;
-    -webkit-appearance:none;
- }
-
-textarea {
-    margin-top: 40px;
-    min-height: 200px;
-    resize: none;
-}
-
-.form-control:focus {
-    box-shadow: none;
-    border-bottom-color: #e1e1e1;
-}
-
-::-moz-placeholder,
-::-webkit-input-placeholder {
-    font-size: 16px;
-}
-
-/* LAYOUT
-================================================== */
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    color: #212121;
-}
-
-.img-res {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-}
-
-.visible-xxs {
-    display: none;
-}
-
-/* Background-color */
-.gray-bg {
-    background-color: #e1e1e1;
-}
-
-/* HEADER
-================================================== */
-.site-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: transparent;
-    z-index: 5;
-}
-
-.site-logo img {
-    padding-bottom: 2px;
-}
-
-/* Navigation */
-.navbar-nav > li > a {
-    padding: 5px 0;
-    font-weight: 600;
-    color: #212121;
-    text-transform: uppercase;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.25s ease-in-out;
-    -moz-transition: border-color 0.25s ease-in-out;
-    -webkit-transition: border-color 0.25s ease-in-out;
-    -o-transition: border-color 0.25s ease-in-out;
-    -ms-transition: border-color 0.25s ease-in-out;
-}
-
-.navbar-nav.navbar-right {
-    margin-right: 0;
-}
-
-.navbar-nav > li + li > a {
-    margin-left: 40px;
-}
-
-.navbar-nav > li > a:hover,
-.navbar-nav > li.active > a,
-.nav > li > a:hover,
-.nav > li.active > a {
-    background-color: transparent;
-    border-bottom: 2px solid #212121;
-}
-
-.nav > li > a:focus {
-    background-color: transparent;
-}
-
-/* HERO
-================================================== */
-.hero {
-    background: url(../img/1.gif) no-repeat center / cover;
-    height: 100%;
-    width: 100%;
-    min-height: 700px;
-}
-
-.hero .container {
-    position: relative;
-    height: 100%;
-}
-
-.hero .col-md-6:first-child {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    z-index: 2;
-}
-
-.hero .col-md-6:last-child {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-
-.hero h1 {
-    font-size: 50px;
-    font-weight: 800;
-    margin: 0 0 20px;
-    text-transform: uppercase;
-}
-
-.job-title {
-    font-size: 22px;
-    margin-bottom: 30px;
-    line-height: 1;
-}
-
-.hero img {
-    height:700px;
-}
-
-/* SITEMAIN
-================================================== */
-.site-main {
-    position: relative;
-    margin-bottom: 100px;
-    background-color: #fff;
-    z-index: 1;
-}
-/* site-section */
-.site-section {
-   padding-top: 120px;
-}
-
-.site-section h2,
-.site-section h3 {
-    font-size: 36px;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.img-lines {
-    margin: 10px 0 40px;
-}
-
-.site-section p {
-    margin-bottom: 35px;
-}
-
-/* Section: Skills */
-.section-skills {
-    padding-bottom: 120px;
-}
-
-.skill + .skill {
-    margin-top: 50px;
-}
-
-.skill h4 {
-    font-size: 24px;
-    text-transform: uppercase;
-    margin: 0 0 15px;
-}
-
-.progress {
-    height: 15px;
-    margin-bottom: 0;
-    border-radius: 0;
-    background-color: #dfdfdf;
-    box-shadow: none;
-}
-
-.progress-bar {
-    background-color: #212121;
-}
-
-/* Section: Services */
-.section-services {
-    position: relative;
-    padding-top: 220px;
-}
-
-.section-services:before {
-    content: '';
-    background: url(../img/services-bg.jpg) no-repeat fixed center / cover;
-    width: 100%;
-    height: 400px;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.overlay:after {
-    content: '';
-    width: 100%;
-    height: 400px;
-    position: absolute;
-    background-color: rgba(255,255,255,0.5);
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-.section-services .container {
-    padding: 120px 100px;
-    position: relative;
-    background-color: #fff;
-    box-shadow: 0px 0px 40px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.service h4 {
-    margin: 25px 0;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.service p {
-    color: #000;
-    margin-bottom: 0;
-}
-
-/* Section: Portfolio */
-.section-portfolio {
-    padding-bottom: 120px;
-}
-
-.portfolio-item {
-    height: 280px;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.section-portfolio .col-md-4:nth-last-child(-n+3) .portfolio-item {
-    margin-bottom: 0;
-}
-
-.portfolio-item:before {
-    content: '';
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: background-color 0.25s ease-in-out;
-    -moz-transition: background-color 0.25s ease-in-out;
-    -webkit-transition: background-color 0.25s ease-in-out;
-    -o-transition: background-color 0.25s ease-in-out;
-    -ms-transition: background-color 0.25s ease-in-out;
-}
-
-.portfolio-item:hover:before{
-    background-color: rgba(33,33,33,0.6);
-}
-
-.portfolio-item-info {
-    position: absolute;
-    top: 150px;
-    left: 0px;
-    z-index: 999;
-    opacity: 0;
-    transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -moz-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -webkit-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -o-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -ms-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-}
-
-.portfolio-item:hover .portfolio-item-info {
-    left: 50px;
-    opacity: 1;
-}
-
-.portfolio-item-info h4 {
-    margin: 0 0 20px;
-    font-weight: 700;
-    color: #fff;
-}
-
-.portfolio-item-info a {
-    padding: 6px 7px 4px;
-    font-size: 12px;
-    border: 1px solid #fff;
-    border-radius: 50px;
-    color: #fff;
-    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -o-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-}
-
-.portfolio-item-info a:hover {
-    color: #212121;
-    background-color: #fff;
-}
-
-.section-portfolio .btn {
-    margin-top: 10px;
-}
-
-/* Modal */
-.modal {
-    z-index: 9999;
-}
-
-.modal-content {
-    border-radius: 0;
-    box-shadow: 0px 0px 40px 8px rgba(0, 0, 0, 0.2);
-    width: 950px;
-    margin: inherit;
-}
-
-.modal-header {
-    position: relative;
-    padding: 0;
-    height: 500px;
-}
-
-.modal-header .close {
-    position: absolute;
-    right: 0;
-    padding: 10px 11px;
-    margin-top: 0;
-    background-color: #fff;
-    font-size: 16px;
-    color: #212121;
-    border-left: 1px solid #212121;
-    border-bottom: 1px solid #212121;
-    opacity: 1;
-    transition: box-shadow 0.25s ease-in-out;
-    -moz-transition: box-shadow 0.25s ease-in-out;
-    -webkit-transition: box-shadow 0.25s ease-in-out;
-    -o-transition: box-shadow 0.25s ease-in-out;
-    -ms-transition: box-shadow 0.25s ease-in-out;
-}
-
-.modal-header .close:hover {
-    box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
-}
-
-.modal-body h4 {
-    font-weight: 700;
-}
-
-.modal-footer {
-    text-align: center;
-}
-
-/* Section: Counters */
-.section-counters {
-    background: url(../img/counters-bg.jpg) no-repeat fixed center / cover;
-    width: 100%;
-    padding: 100px 0;
-    position: relative;
-}
-
-.section-counters:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.7);
-}
-
-.section-counters h4 {
-    color: #fff;
-    margin: 25px 0 0;
-}
-
-.site-section p.counter {
-    font-size: 100px;
-    font-weight: 300;
-    color: #fff;
-    margin: 0;
-    line-height: 0.8;
-}
-
-/* Section: Form*/
-.section-form {
-    padding-bottom: 120px;
-}
-
-.section-form .btn {
-    margin-top: 40px;
-}
-
-/* FOOTER
-================================================== */
-.site-footer {
-    position:inherit;
-    bottom: 0;
-    padding: 30px 0;
-    width: 100%;
-    background-color: #212121;
-    z-index: -1;
-}
-
-.icon {
-    line-height: 50px;
-    padding: 9px 11px;
-    color: #fff;
-    border: 1px solid #fff;
-    border-radius: 50%;
-}
-
-.icon + .icon {
-    margin-left: 5px;
-}
-
-.icon i:before {
-    margin:0;
-}
-
-.icon:hover {
-    background-color: #fff;
-}
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flip-card-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-.site-footer{
-  margin-top: 100px;
-}
-.site-footer a {
-    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -o-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-}
-
-a.twitter-bg:hover{color:#007bb5; }
-a.linkedin-bg:hover {color: #007bb5;}
-a.icon-up-bg:hover {color: #212121;}
-
-.copyright {
-    margin-bottom: 0;
-    line-height: 40px;
-    color: #fff;
-    text-align: center;
-}
+  <!-- Basic Page Needs
+    ================================================== -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Sudhanshu : Web Developer</title>
+
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+
+  <!-- Mobile Specific Metas
+    ================================================== -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+  <!-- Favicon
+    ================================================== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.png">
+
+  <!-- Stylesheets
+    ================================================== -->
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <header id="masthead" class="site-header" data-anchor-target=".hero" data-top="background: rgba(255,255,255,0); padding: 30px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0);"
+    data-top-bottom="background: rgba(255,255,255,1); padding: 10px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.2);">
+    <nav id="primary-navigation" class="site-navigation">
+      <div class="container">
+        <div class="navbar-header page-scroll">
+
+          <button type="button" class="navbar-toggle collapsed" data-target="#portfolio-perfect-collapse" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        </div><!-- /.navbar-header -->
+
+        <div class="main-menu" id="portfolio-perfect-collapse">
+
+          <ul class="nav navbar-nav navbar-right">
+
+            <li class="page-scroll"><a href="#hero">Home</a></li>
+            <li class="page-scroll"><a href="#about">About</a></li>
+            <li class="page-scroll"><a href="#service">Service</a></li>
+            <li class="page-scroll"><a href="#portfolio">Portfolio</a></li>
+            <li class="page-scroll"><a href="#contact">Contact</a></li>
+
+          </ul><!-- /.navbar-nav -->
+
+        </div><!-- /.navbar-collapse -->
+
+      </div>
+    </nav><!-- /.primary-navigation -->
+  </header><!-- /#header -->
+
+  <div id="hero" class="hero">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6" style="padding-bottom:50px; padding-right:50px;">
+          <h1 >Sudhanshu Kumar</h1>
+          <div class="page-scroll">
+            <p class="job-title">Full Stack Web Developer</p>
+            <a href="#contact" class="btn btn-fill ">Hire me</a>
+            <div class="clearfix visible-xxs"></div>
+            <a href="#portfolio" class="btn btn-border btn-outline-dark">Explore more</a>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 text-right">
+
+        </div>
+
+
+      </div>
+    </div>
+  </div><!-- /.hero -->
+
+  <main id="main" class="site-main">
+
+    <section id="about" class="site-section section-about text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <h2>About</h2>
+            <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+            <p>Hello! I'm Sudhanshu, a full stuck developer, a React JS enthusiast, and a guy slighty obsessed for code quality.I’m currently available for freelance work. If you have a project that you want to get started or think you need my help
+              with something, then get in touch.</p>
+            <a href="assets/CV/cv.pdf" class="btn btn-fill" target="_blank" download>Download my cv</a>
+          </div>
+        </div>
+      </div>
+    </section><!-- /.secton-about -->
+
+    <section class="site-section section-skills">
+      <div class="container">
+        <div class="text-center">
+          <h3>My Skills</h3>
+          <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="skill">
+              <h4>Html/css</h4>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" data-transitiongoal="90"></div><!-- /.progress-bar -->
+              </div><!-- /.progress -->
+            </div><!-- /.skill -->
+            <div class="skill">
+              <h4>Python</h4>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" data-transitiongoal="25"></div><!-- /.progress-bar -->
+              </div><!-- /.progress -->
+            </div><!-- /.skill -->
+          </div>
+          <div class="col-md-4">
+            <div class="skill">
+              <h4>Javascript</h4>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" data-transitiongoal="42"></div><!-- /.progress-bar -->
+              </div><!-- /.progress -->
+            </div><!-- /.skill -->
+            <div class="skill">
+              <h4>React JS</h4>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" data-transitiongoal="46"></div><!-- /.progress-bar -->
+              </div><!-- /.progress -->
+            </div><!-- /.skill -->
+          </div>
+          <div class="col-md-4">
+            <div class="skill">
+              <h4>Php</h4>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" data-transitiongoal="50"></div><!-- /.progress-bar -->
+              </div><!-- /.progress -->
+            </div><!-- /.skill -->
+            <div class="skill">
+              <h4>Java</h4>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" data-transitiongoal="45"></div><!-- /.progress-bar -->
+              </div><!-- /.progress -->
+            </div><!-- /.skill -->
+          </div>
+        </div>
+      </div>
+    </section><!-- /.secton-skills -->
+
+    <section id="service" class="site-section section-services overlay text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>What i do</h3>
+            <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+          </div>
+          <div class="col-sm-4">
+            <div class="service">
+              <img src="assets/img/front-end.svg" alt="Front End Developer">
+              <h4>Front-end</h4>
+              <p>As a Web developer/Designer, I have knowledge in HTML5 and CSS3 techniques and Bootstrap effects working with jQuery or more advanced</p>
+            </div><!-- /.service -->
+          </div>
+          <div class="col-sm-4">
+            <div class="service">
+              <img src="assets/img/back-end.svg" alt="Back End Developer">
+              <h4>Back-end</h4>
+              <p>PHP frameworks,including REST APIs, e-learning applications and more.</p>
+            </div><!-- /.service -->
+          </div>
+          <div class="col-sm-4">
+            <div class="service">
+              <img src="assets/img/consultancy.svg" alt="Coding">
+              <h4>Web Design</h4>
+              <p>As well as providing development services, I can also help you decide strategic services.</p>
+            </div><!-- /.service -->
+          </div>
+        </div>
+      </div>
+    </section><!-- /.secton-services -->
+
+    <section id="portfolio" class="site-section section-portfolio">
+      <div class="container">
+        <div class="text-center">
+          <h3>My recent Works</h3>
+          <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-xs-6">
+            <div class="portfolio-item">
+              <img src="assets/img/portfolio-1.png" class="img-res" alt="">
+              <div class="portfolio-item-info">
+                <h4>Tindog</h4>
+                <a href="#" data-toggle="modal" data-target="#portfolioItem1"><span class="glyphicon glyphicon-eye-open"></span></a>
+                <a href="https://sudhanshu-coder.github.io/TinDog/"><span class="glyphicon glyphicon-link"></span></a>
+              </div><!-- /.portfolio-item-info -->
+            </div><!-- /.portfolio-item -->
+          </div>
+          <div class="col-md-6 col-xs-6">
+            <div class="portfolio-item">
+              <img src="assets/img/portfolio-2.png" class="img-res" alt="">
+              <div class="portfolio-item-info">
+                <h4>Python : Grocery Billing System </h4>
+                <a href="#" data-toggle="modal" data-target="#portfolioItem2"><span class="glyphicon glyphicon-eye-open"></span></a>
+                <a href="https://github.com/Sudhanshu-coder/Grocery-Billing"><span class="glyphicon glyphicon-link"></span></a>
+              </div><!-- /.portfolio-item-info -->
+            </div><!-- /.portfolio-item -->
+          </div>
+          <div class="col-md-4 col-xs-6">
+            <div class="portfolio-item">
+              <img src="assets/img/portfolio-3.jpg" class="img-res" alt="">
+              <div class="portfolio-item-info">
+                <h4>Online Examination System</h4>
+                <a href="#" data-toggle="modal" data-target="#portfolioItem3"><span class="glyphicon glyphicon-eye-open"></span></a>
+                <a href="https://ionized-lieutenants.000webhostapp.com/Sudhanshu/index.php"><span class="glyphicon glyphicon-link"></span></a>
+              </div><!-- /.portfolio-item-info -->
+            </div><!-- /.portfolio-item -->
+          </div>
+        </div>
+      </div>
+    </section><!-- /.secton-portfolio -->
+
+    <section class="site-section section-counters text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 col-xs-12">
+            <p class="counter start" data-to="2" data-speed="500">1</p>
+            <h4>Year learning Experience</h4>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <p class="counter start" data-to="0" data-speed="500">0</p>
+            <h4>Projects Delivered</h4>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <p id="infinity" class="counter" data-from="0" data-to="1" data-speed="1000">0</p>
+            <h4>Seconds Gone!<br>What are you waiting for?</h4>
+          </div>
+        </div>
+      </div>
+    </section><!-- /.section-counters -->
+
+    <section id="contact" class="site-section section-form text-center">
+      <div class="container">
+
+
+        <form method="post">
+          <div class="row">
+            <h3>Contact</h3>
+            <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+            <br>
+            <a href="mailto:sudhanshuavi06@gmail.com" class="btn btn-border">Hire Me <span class="glyphicon glyphicon-send"></span></a>
+            <div class="col-sm-12">
+              <center>
+                <br>
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="assets/img/D.png" alt="Avatar" style="width:250px;height:300px;">
+                    </div>
+                    <div class="flip-card-back">
+                      <h1>Sudhanshu Kumar</h1>
+                      <p>Web Developer</p>
+                      <p>Whatsapp : 7491030508</p>
+                    </div>
+                  </div>
+                </div>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        </form>
+      </div>
+    </section><!-- /.section-form -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-xs-6">
+                    <a class="icon twitter-bg" target="_blank" href="https://twitter.com/Sudhans12379552"><i class="icon-twitter"></i></a>
+                    <a class="icon linkedin-bg" target="_blank" href="https://www.linkedin.com/in/sudhanshu-kumar-b99358175/"><i class="icon-linkedin"></i></a>
+                </div>
+                <div class="col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3"><p class="copyright">Sudhanshu © 2021 All Rights Reserved</p></div>
+                <div class="col-sm-4 col-xs-3">
+                    <div class="text-right page-scroll">
+                        <a class="icon icon-up-bg" href="#hero"><i class="icon-up"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><!-- /#footer -->
+
+  </main><!-- /#main -->
+
+  <!-- Modals -->
+  <div id="portfolioItem1" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+          <img class="img-res" src="assets/img/portfolio-1.png" alt="TinDog Website">
+        </div>
+        <div class="modal-body">
+          <h4 class="modal-title">TinDog</h4>
+          <p>This is a Sample Website for showing my work and these is a demo of my work which are show my knowledge and hardworking eligibility for your projects and ideas related with Web Development</p>
+          <p>This is Website for Dogs It is used for dogs Profiles and it whole discreption if anyone want to buy a dog this platform is for them and if anyone found any dog which is physically weak or need medic treatment.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://sudhanshu-coder.github.io/TinDog/" class="btn btn-fill">Visit Page</a>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div id="portfolioItem2" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+          <img class="img-res" src="assets/img/portfolio-2.png" alt="">
+        </div>
+        <div class="modal-body">
+          <h4 class="modal-title">Python : Grocery Billing System</h4>
+          <p>This is a Sample Website for showing my work and these is a demo of my work which are show my knowledge and hardworking eligibility for your projects and ideas related with Development</p>
+          <p>Grocery Billing System is Python Tkinter Created Project which is supported only Desktop version not for mobile and It is used by Python Technologies for creating this Groceries Billing System It is very good for real world Groceries
+            Stores which suffering for billing managment System It will provide the Whole facilities for those who want there groceries store generate bill just a one click There is one thing about this project it only work on windows or .exe related
+            files It will fully created with Python Tkinter File handling Process.
+          <p>Step1 : Download Whole File with Visit Page link.</p>
+          <p>Step2 : Run The bill.exe File and use it easily</p>
+          <p>Note: If you facing any problem then contact me</p>
+          </p>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/Sudhanshu-coder/Grocery-Billing" class="btn btn-fill">Visit Page</a>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div id="portfolioItem3" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+          <img class="img-res" src="assets/img/portfolio-3.jpg" alt="">
+        </div>
+        <div class="modal-body">
+          <h4 class="modal-title">Online Examination System</h4>
+          <p>This is a Sample Website for showing my work and these is a demo of my work which are show my knowledge and hardworking eligibility for your projects and ideas related with Web Development</p>
+          <p>This is Website for Online Examination System and it is used for conducting Online Exam which are use for checking the knowledge ability and analysis there mind capcity for gaining knowledge and make sure do well in future.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://ionized-lieutenants.000webhostapp.com/Sudhanshu/index.php" class="btn btn-fill">Visit Page</a>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal <-->
+  </-->
+
+
+
+
+
+  <!-- Bootstrap core JavaScript
+      ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="assets/js/skrollr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
+  <script src="assets/js/jquery.countTo.min.js"></script>
+  <script src="assets/js/script.js"></script>
+
+
+</body>
+
+</html>
