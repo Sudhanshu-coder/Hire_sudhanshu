@@ -179,9 +179,6 @@ html, body {
     z-index: 5;
 }
 
-.site-logo img {
-    padding-bottom: 2px;
-}
 
 /* Navigation */
 .navbar-nav > li > a {
@@ -222,8 +219,8 @@ html, body {
 .hero {
     background: url(../img/1.jpg) no-repeat center / cover;
     height: 100%;
-    width: 100%;
-    min-height: 700px;
+    width:100%;
+    min-height:800px;
 }
 
 .hero .container {
@@ -252,7 +249,7 @@ html, body {
 .hero h1 {
     font-size: 50px;
     font-weight: 800;
-    margin: 0 0 20px;
+    margin: 0 10 20px;
     text-transform: uppercase;
 }
 
