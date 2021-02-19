@@ -217,7 +217,7 @@ html, body {
 /* HERO
 ================================================== */
 .hero {
-    background: url(../img/1.jpg) no-repeat center / cover;
+    background: url(../img/1.gif) no-repeat center / cover;
     height: 100%;
     width:100%;
     min-height:800px;
@@ -238,6 +238,7 @@ html, body {
     -moz-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     z-index: 2;
+    color:#fff; 
 }
 
 .hero .col-md-6:last-child {
